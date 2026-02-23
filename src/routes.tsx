@@ -11,4 +11,6 @@ export const router = createBrowserRouter([
     path: "/project/:projectId",
     Component: ProjectDetail,
   },
-]);
+], {
+  basename: '/Portfoliowebsite',
+});
