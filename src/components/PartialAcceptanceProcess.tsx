@@ -151,15 +151,13 @@ export default function PartialAcceptanceProcess() {
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
         <div className="bg-gradient-to-r from-[#695aa6] to-[#543d8d] p-6">
           <h3 
-            className="text-2xl text-white flex items-center gap-3"
-            style={{ fontFamily: "'Leckerli One', sans-serif" }}
+            className="text-2xl text-white flex items-center gap-3 font-leckerli"
           >
             <Calendar size={28} />
             部分竣工驗收流程時間軸
           </h3>
           <p 
-            className="text-white/90 text-sm mt-2"
-            style={{ fontFamily: "'Patrick Hand', cursive" }}
+            className="text-white/90 text-sm mt-2 font-patrick"
           >
             將滑鼠移至各階段查看關鍵作業與風險注意事項
           </p>
@@ -182,16 +180,14 @@ export default function PartialAcceptanceProcess() {
                     }}
                   >
                     {/* Milestone Label */}
-                    <div className="text-center mb-2">
+                      <div className="text-center mb-2">
                       <div 
-                        className="text-xs font-bold text-gray-700"
-                        style={{ fontFamily: "'Patrick Hand', cursive" }}
+                        className="text-xs font-bold text-gray-700 font-patrick"
                       >
                         {milestone.label}
                       </div>
                       <div 
-                        className="text-xs text-gray-600 whitespace-nowrap"
-                        style={{ fontFamily: "'Patrick Hand', cursive" }}
+                        className="text-xs text-gray-600 whitespace-nowrap font-patrick"
                       >
                         {milestone.name}
                       </div>
@@ -247,16 +243,14 @@ export default function PartialAcceptanceProcess() {
                               hoveredStage === stage.id
                                 ? 'bg-white text-[#e91e63]'
                                 : 'bg-[#e91e63] text-white'
-                            }`}
-                            style={{ fontFamily: "'Leckerli One', sans-serif" }}
+                            } font-leckerli`}
                           >
                             {stage.id}
                           </span>
                           <h4 
                             className={`font-bold ${
                               hoveredStage === stage.id ? 'text-white' : 'text-gray-800'
-                            }`}
-                            style={{ fontFamily: "'Patrick Hand', cursive" }}
+                            } font-patrick`}
                           >
                             {stage.title}
                           </h4>
@@ -266,8 +260,7 @@ export default function PartialAcceptanceProcess() {
                             hoveredStage === stage.id
                               ? 'bg-white/30 text-white'
                               : 'bg-white/60 text-gray-600'
-                          }`}
-                          style={{ fontFamily: "'Patrick Hand', cursive" }}
+                          } font-patrick`}
                         >
                           <Clock size={12} />
                           <span>{stage.duration}</span>
@@ -278,8 +271,7 @@ export default function PartialAcceptanceProcess() {
                       {hoveredStage !== stage.id && (
                         <div>
                           <p 
-                            className="text-sm text-gray-700 mb-3"
-                            style={{ fontFamily: "'Patrick Hand', cursive" }}
+                            className="text-sm text-gray-700 mb-3 font-patrick"
                           >
                             {stage.description}
                           </p>
@@ -287,8 +279,7 @@ export default function PartialAcceptanceProcess() {
                             {stage.deliverables.slice(0, 3).map((item, idx) => (
                               <span
                                 key={idx}
-                                className="bg-white/80 text-gray-700 px-2 py-1 rounded text-xs"
-                                style={{ fontFamily: "'Patrick Hand', cursive" }}
+                                className="bg-white/80 text-gray-700 px-2 py-1 rounded text-xs font-patrick"
                               >
                                 {item}
                               </span>
@@ -310,8 +301,7 @@ export default function PartialAcceptanceProcess() {
                               {stage.keyActions.slice(0, 4).map((action, idx) => (
                                 <li 
                                   key={idx}
-                                  className="flex items-start gap-2 text-xs text-white/95"
-                                  style={{ fontFamily: "'Patrick Hand', cursive" }}
+                                  className="flex items-start gap-2 text-xs text-white/95 font-patrick"
                                 >
                                   <span className="text-white mt-0.5">•</span>
                                   <span>{action}</span>
@@ -330,8 +320,7 @@ export default function PartialAcceptanceProcess() {
                               {stage.risks.map((risk, idx) => (
                                 <li 
                                   key={idx}
-                                  className="flex items-start gap-2 text-xs text-white/95"
-                                  style={{ fontFamily: "'Patrick Hand', cursive" }}
+                                  className="flex items-start gap-2 text-xs text-white/95 font-patrick"
                                 >
                                   <span className="text-yellow-300 mt-0.5">⚠</span>
                                   <span>{risk}</span>
@@ -350,8 +339,7 @@ export default function PartialAcceptanceProcess() {
                         style={{ opacity: 0.8 }}
                       >
                         <span 
-                          className="text-white text-xs font-bold"
-                          style={{ fontFamily: "'Patrick Hand', cursive" }}
+                          className="text-white text-xs font-bold font-patrick"
                         >
                           {stage.title} ({stage.duration})
                         </span>
@@ -364,7 +352,7 @@ export default function PartialAcceptanceProcess() {
 
             {/* Bottom Time Labels */}
             <div className="relative mt-8 pt-6 border-t border-gray-200">
-              <div className="flex justify-between text-xs text-gray-500" style={{ fontFamily: "'Patrick Hand', cursive" }}>
+              <div className="flex justify-between text-xs text-gray-500 font-patrick">
                 <span>第 0 日</span>
                 <span>第 20 日</span>
                 <span>第 40 日</span>

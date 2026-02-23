@@ -1,9 +1,43 @@
 @import 'tailwindcss' layer(base, components, utilities);
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Patrick+Hand&family=Leckerli+One&family=ZCOOL+XiaoWei&display=swap');
 
 * {
   box-sizing: border-box;
+}
+
+/* Ensure elements that set inline font-family to Patrick Hand or Leckerli One
+   will get a sensible fallback (including Noto Sans TC) for Chinese characters.
+   This helps when the webfont doesn't include CJK glyphs or the font isn't installed.
+*/
+[style*="Patrick Hand"],
+[style*="'Patrick Hand'"] {
+  font-family: 'Patrick Hand', 'Noto Sans TC', -apple-system, 'PingFang TC', 'Microsoft JhengHei', sans-serif !important;
+}
+
+[style*="Leckerli One"],
+[style*="'Leckerli One'"] {
+  font-family: 'Leckerli One', 'Noto Sans TC', -apple-system, 'PingFang TC', 'Microsoft JhengHei', sans-serif !important;
+}
+
+/* Utility classes to use instead of inline styles */
+.font-patrick {
+  font-family: 'Patrick Hand', 'Noto Sans TC', -apple-system, 'PingFang TC', 'Microsoft JhengHei', sans-serif !important;
+}
+
+.font-leckerli {
+  font-family: 'Leckerli One', 'Noto Sans TC', -apple-system, 'PingFang TC', 'Microsoft JhengHei', sans-serif !important;
+}
+
+/* For hero/navbar where we want Patrick Hand look but consistent Chinese glyphs,
+   prefer a handwritten Chinese webfont (ZCOOL XiaoWei) before falling back to Noto.
+   Use this on `Hero` and `Navbar` to keep the intended visual style. */
+.font-patrick-hero {
+  font-family: 'Patrick Hand', 'ZCOOL XiaoWei', 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, sans-serif !important;
+}
+
+.font-leckerli-hero {
+  font-family: 'Leckerli One', 'ZCOOL XiaoWei', 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, sans-serif !important;
 }
 
 body {
