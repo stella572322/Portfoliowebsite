@@ -1,7 +1,7 @@
 import { Monitor, Smartphone } from 'lucide-react';
-import prototypeF11 from 'figma:asset/f94eb823c2f01ca9811a30a1ea00d65651123d82.png';
-import prototypeF12 from 'figma:asset/0328e4b97082c87a6d1570d350ea95be448a9f3d.png';
-import prototypeApp from 'figma:asset/6f850e5bfed7ccc2a944adb54084a2dad2d89f8f.png';
+import prototypeF11 from '../assets/f94eb823c2f01ca9811a30a1ea00d65651123d82.png';
+import prototypeF12 from '../assets/0328e4b97082c87a6d1570d350ea95be448a9f3d.png';
+import prototypeApp from '../assets/6f850e5bfed7ccc2a944adb54084a2dad2d89f8f.png';
 
 export default function InteractivePrototypeSection() {
   return (

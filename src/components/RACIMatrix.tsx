@@ -1,4 +1,4 @@
-import blurredImage from 'figma:asset/bd3899decaef770835511e3459c28f8bb4046694.png';
+import blurredImage from '../assets/bd3899decaef770835511e3459c28f8bb4046694.png';
 
 export default function RACIMatrix() {
   return (

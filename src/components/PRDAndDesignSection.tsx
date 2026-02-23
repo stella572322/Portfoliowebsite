@@ -1,9 +1,9 @@
 import { FileText, Maximize2, Calendar, Users, Target } from 'lucide-react';
 import { useState } from 'react';
-import prdDocumentImage from 'figma:asset/3f5d28e415f03d6079c05c22ea0c3b42e535d0e5.png';
-import figmaDesign1 from 'figma:asset/c2df20eac803f32b07aa2856fb572a859504e539.png';
-import figmaDesign2 from 'figma:asset/de9cbcc2228cdc696557db2f501cf9796b179335.png';
-import figmaDesign3 from 'figma:asset/dd1300fbfead8ce0856b521772b65eabca36952e.png';
+import prdDocumentImage from '../assets/3f5d28e415f03d6079c05c22ea0c3b42e535d0e5.png';
+import figmaDesign1 from '../assets/c2df20eac803f32b07aa2856fb572a859504e539.png';
+import figmaDesign2 from '../assets/de9cbcc2228cdc696557db2f501cf9796b179335.png';
+import figmaDesign3 from '../assets/dd1300fbfead8ce0856b521772b65eabca36952e.png';
 
 export default function PRDAndDesignSection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);

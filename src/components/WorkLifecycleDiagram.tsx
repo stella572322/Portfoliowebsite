@@ -1,4 +1,4 @@
-import originalImage from 'figma:asset/35b5789c2d837f27b437907d97838ddb2cd68815.png';
+import originalImage from '../assets/35b5789c2d837f27b437907d97838ddb2cd68815.png';
 
 export default function WorkLifecycleDiagram() {
   return (

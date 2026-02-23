@@ -1,5 +1,5 @@
-import image_1f560cabcf943cd4612a3bc1817d1a594e9ba1f4 from 'figma:asset/1f560cabcf943cd4612a3bc1817d1a594e9ba1f4.png';
-import image_eba95b731ea346f19e3c1d968a6963eb0a401602 from 'figma:asset/eba95b731ea346f19e3c1d968a6963eb0a401602.png'
+import image_1f560cabcf943cd4612a3bc1817d1a594e9ba1f4 from '../assets/1f560cabcf943cd4612a3bc1817d1a594e9ba1f4.png';
+import image_eba95b731ea346f19e3c1d968a6963eb0a401602 from '../assets/eba95b731ea346f19e3c1d968a6963eb0a401602.png';
 export interface Project {
   id: string;
   title: string;

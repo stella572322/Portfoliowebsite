@@ -1,4 +1,4 @@
-import originalImage from 'figma:asset/33db2438baad27c7d173bfe64ff2c8234fbc5656.png';
+import originalImage from '../assets/33db2438baad27c7d173bfe64ff2c8234fbc5656.png';
 
 export default function UserDataReviewDiagram() {
   return (

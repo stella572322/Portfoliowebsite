@@ -1,4 +1,4 @@
-import blurredImage from 'figma:asset/cc466b5338593319c6651b8b4346b626fee6f562.png';
+import blurredImage from '../assets/cc466b5338593319c6651b8b4346b626fee6f562.png';
 
 export default function BPMNDiagram() {
   return (

@@ -1,4 +1,4 @@
-import image_cc1a89380b74d843961d08cade57a5108da294e3 from 'figma:asset/cc1a89380b74d843961d08cade57a5108da294e3.png';
+import image_cc1a89380b74d843961d08cade57a5108da294e3 from '../assets/cc1a89380b74d843961d08cade57a5108da294e3.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export default function About() {

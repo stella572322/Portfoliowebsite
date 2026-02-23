@@ -52,8 +52,8 @@ export default function Navbar() {
     >
       <nav className="flex justify-between items-center h-[100px] px-5">
         <div className="name">
-          <h1 
-            className={`text-[30px] font-[Leckerli_One] transition-colors duration-300 ${
+          <h1
+            className={`text-[30px] transition-colors duration-300 ${
               isScrolled ? 'text-[#695aa6]' : 'text-white'
             }`}
             style={{ fontFamily: "'Leckerli One', sans-serif" }}

@@ -1,4 +1,4 @@
-import blurredImage from 'figma:asset/3b78f365b20872e634a2384c1ce7160af7c14d36.png';
+import blurredImage from '../assets/3b78f365b20872e634a2384c1ce7160af7c14d36.png';
 
 export default function UseCaseDiagram() {
   // Define actors (users)

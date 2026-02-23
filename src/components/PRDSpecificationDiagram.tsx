@@ -1,4 +1,4 @@
-import originalImage from 'figma:asset/6f16fbee5ca6025a7cede9936653ba076a3587a0.png';
+import originalImage from '../assets/6f16fbee5ca6025a7cede9936653ba076a3587a0.png';
 
 export default function PRDSpecificationDiagram() {
   return (

@@ -1,4 +1,4 @@
-import image_eba95b731ea346f19e3c1d968a6963eb0a401602 from 'figma:asset/eba95b731ea346f19e3c1d968a6963eb0a401602.png'
+import image_eba95b731ea346f19e3c1d968a6963eb0a401602 from '../assets/eba95b731ea346f19e3c1d968a6963eb0a401602.png'
 import { useParams, Link } from 'react-router';
 import { ArrowLeft, Target, Users, Calendar, Wrench, Building2, CheckCircle2 } from 'lucide-react';
 import { getProjectById } from '../data/projectsData';

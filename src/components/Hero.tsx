@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import { Phone, Mail } from 'lucide-react';
-import headerImage from 'figma:asset/d207ae304de7a2b4775b5d60171336f4b7e77413.png';
+import headerImage from '../assets/d207ae304de7a2b4775b5d60171336f4b7e77413.png';
 
 export default function Hero() {
   const typedRef = useRef(null);

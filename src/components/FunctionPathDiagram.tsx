@@ -1,4 +1,4 @@
-import blurredImage from 'figma:asset/366478590c6615153994e36729201aaecddf2a66.png';
+import blurredImage from '../assets/366478590c6615153994e36729201aaecddf2a66.png';
 import { FileText, CheckCircle2, AlertCircle, Upload, Eye, XCircle, ArrowRight, ChevronDown } from 'lucide-react';
 
 // Arrow Component - Modern Solid Arrow Style
