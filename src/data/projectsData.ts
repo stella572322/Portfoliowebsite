@@ -10,6 +10,17 @@ export interface Project {
   overview: string;
   background: string;
   challenges: string[];
+  // PM challenge -> action mappings for key scenarios
+  challengeActions?: {
+    scene: string;
+    actions: string;
+  }[];
+  // Consolidated sections for UI-friendly rendering (overview/background/challenges/solutions/impact/challengeActions)
+  summarySections?: {
+    title: string;
+    content?: string;
+    items?: { heading?: string; text: string }[];
+  }[];
   objectives: string[];
   stakeholders: string[];
   methodology: string;
@@ -55,6 +66,66 @@ export const projects: Project[] = [
       '法規遵循要求：需符合政府採購法、工程會相關規範、各項工程技術標準等法規要求',
       '跨平台整合：同步開發網頁系統與行動 App，支援工地現場即時作業',
       '使用者多元：服務對象包含主辦機關、監造單位、施工廠商、稽核人員等不同角色'
+    ],
+    // PM 的挑戰場景與對應行動 (Actions)
+    challengeActions: [
+      {
+        scene: '嚴重的數據孤島 (Data Silo)',
+        actions: '核心策略： 建立「單一事實來源 (Single Source of Truth)」。定義標準化 API 介接規範，強制實現「一次輸入、全域同步」，徹底解決資料不一致問題。'
+      },
+      {
+        scene: '45萬筆高污染數據',
+        actions: '品質管理： 設計「自動化邏輯檢核引擎」。針對高程倒流、坐標偏移等邏輯錯誤建立自動篩選機制，將清理工作從人工轉向半自動化，大幅節省人力。'
+      },
+      {
+        scene: '複雜的跨部門協作',
+        actions: '溝通協調： 主持 38 場跨單位會議。透過 User Story Mapping 梳理不同科室的重疊職權，設計 Role-Based 權限模型，平衡資料開放與資訊安全。'
+      }
+    ],
+    // Consolidated sections to drive ProjectDetail rendering
+    summarySections: [
+      {
+        title: 'Overview',
+        content: '本專案為直轄市級政府工程管理數位化系統，整合工程專案從規劃、招標、施工到驗收的完整生命週期管理。系統規模涵蓋 89 個功能模組及跨平台行動應用程式，服務範圍包含工務、交通、水利等多個工程主管機關，提升工程履約管理效率與透明度。'
+      },
+      {
+        title: 'Background',
+        content: '傳統紙本作業與分散系統造成資訊不透明、流程冗長，難以即時監督與跨單位協作，需建立整合性數位管理平台以提升效率並確保工程品質。'
+      },
+      {
+        title: '關鍵挑戰與 PM 行動',
+        items: [
+          {
+            heading: '嚴重的數據孤島 (Data Silo)',
+            text: '問題：資料分散、重複輸入導致不一致。\n行動：建立「單一事實來源 (Single Source of Truth)」，定義標準化 API 介接規範，實施一次輸入、全域同步機制，消除跨系統資料差異。'
+          },
+          {
+            heading: '45萬筆高污染數據',
+            text: '問題：大量圖資存在高程倒流、坐標偏移等邏輯錯誤。\n行動：設計「自動化邏輯檢核引擎」，以規則與範例自動篩選疑似錯誤，建立半自動化清理流程以降低人工作業量。'
+          },
+          {
+            heading: '複雜的跨部門協作',
+            text: '問題：職權重疊、流程缺乏一致性。\n行動：主持 38 場跨單位會議，運用 User Story Mapping 梳理需求與責任，設計 Role-Based 權限模型，平衡資料開放與資訊安全。'
+          }
+        ]
+      },
+      {
+        title: 'Solutions Summary',
+        items: [
+          { text: '建立標準化工程管理流程，整合計畫、招標、履約與驗收等作業' },
+          { text: '開發跨平台應用（Web + Mobile）以支援現場與辦公室作業' },
+          { text: '設計彈性模組化架構，89 個功能模組可按需求組合' },
+          { text: '導入電子化表單與自動通知機制，加速審核與稽核流程' }
+        ]
+      },
+      {
+        title: 'Impact / 成效摘要',
+        items: [
+          { text: '系統規模：89 個功能模組 + 跨平台 App' },
+          { text: '數位化：將 150+ 種紙本表單轉為數位模組' },
+          { text: '效率：審核流程從 7 天縮短至 2 天；資料登錄時間減少 60%' }
+        ]
+      }
     ],
     
     objectives: [
