@@ -102,11 +102,11 @@ export const projects: Project[] = [
     
     impact: [
       { metric: '系統規模', value: '89 個功能模組 + 跨平台 App' },
-      { metric: 'PRD 產出', value: '獨立完成 11 個功能模組需求規格書' },
+      { metric: '數位化程度', value: '成功將 150+ 種紙本表單轉為數位模組' },
       { metric: '使用者滿意度', value: '達成 80% 以上滿意度目標' },
-      { metric: '系統穩定性', value: '系統可用性維持高水準運作' },
+      { metric: '效率提升', value: '將原本紙本審核流程從 7 天縮短至 2 天' },
       { metric: '作業效率', value: '工程資料登錄時間減少 60%' },
-      { metric: '行動化作業', value: '工地現場作業數位化率達 75%' }
+      { metric: '節省成本', value: '減少人工核帳錯誤率達 100%，加速工程款撥付進度' }
     ],
     
     tools: [
@@ -114,6 +114,7 @@ export const projects: Project[] = [
       'Miro（流程分析與協作）',
       'draw.io（統架構與流程圖）',
       'Excel / Google Sheets（需求整理與分析）',
+			'Notion（專案管理）',
     ],
     
     role: 'Product Manager - 負責產品劃、需求分析、PRD 撰寫、跨部門溝通、UAT 規劃。獨立完成 11 個功能模組的完整需求規格文件，協調工程主管機關、監造單位、廠商等多方利害關係人需求。',
@@ -196,7 +197,7 @@ export const projects: Project[] = [
     
     impact: [
       { metric: '資料整合規模', value: '整合 449,021 筆設施資料' },
-      { metric: '數據治理成果', value: '修正 32,000+ 筆圖資差異' },
+      { metric: '系統穩定度', value: '透過分期分批策略，確保舊系統遷移期間業務零中斷' },
       { metric: '教育訓練滿意度', value: '從 70% 提升至 93%' },
       { metric: '作業效率提升', value: '消除三平台重複登打，節省 60% 作業時間' },
       { metric: '獎項肯定', value: '榮獲政府資訊應用類獎項' },
@@ -204,18 +205,14 @@ export const projects: Project[] = [
     ],
     
     tools: [
-      'PHP/Laravel（後端開發框架）',
-      'Vue.js（前端開發框架）',
-      'GIS 圖資系統（空間資料管理）',
-      'Tableau（BI 視覺化儀表板）',
-      'SQL（資料查詢與分析）',
       'Figma（UI/UX 設計）',
       'Miro（流程分析與協作）',
-      'Jira（專案管理）',
-      'Excel / Google Sheets（數據分析與整理）'
+      'draw.io（統架構與流程圖）',
+      'Excel / Google Sheets（需求整理與分析）',
+			'Notion（專案管理）',
     ],
     
-    role: 'Product Manager - 負責需求訪談與分析（21 場深度訪談、17 場跨科室協調會議）、產品規劃與功能設計、數據治理策略規劃、使用者教育訓練規劃與執行、跨部門溝通協調、專案成果管理。成功將教育訓練滿意度從 70% 提升�� 93%，協助專案榮獲政府資訊應用類獎項。',
+    role: 'Product Manager - 負責需求訪談與分析（21 場深度訪談、17 場跨科室協調會議）、產品規劃與功能設計、數據治理策略規劃、使用者教育訓練規劃與執行、跨部門溝通協調、專案成果管理。成功將教育訓練滿意度從 70% 提升至 93%，協助專案榮獲政府資訊應用類獎項。',
     
     timeline: '2019年 - 2024年（共 5+ 年，持續營運與優化）',
     

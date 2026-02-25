@@ -57,7 +57,7 @@ export default function ProjectDetail() {
       </nav>
 
       {/* Hero Section */}
-      <div className="pt-20 pb-12 bg-gradient-to-b from-[#f9f9f9] to-white">
+      <div className="pt-20 bg-gradient-to-b from-[#f9f9f9] to-white">
         <div className="max-w-[76.5rem] mx-auto px-5">
           <div className="mb-8">
             <img 
@@ -138,19 +138,6 @@ export default function ProjectDetail() {
 
       {/* Main Content */}
       <div className="max-w-[76.5rem] mx-auto px-5 py-12">
-        {/* Overview */}
-        <section className="mb-12">
-          <h2 
-            className="text-3xl mb-4 text-[#695aa6] font-leckerli"
-          >
-            專案概述
-          </h2>
-          <p 
-            className="text-lg text-[#212529] leading-relaxed font-patrick"
-          >
-            {project.overview}
-          </p>
-        </section>
 
         {/* Background */}
         <section className="mb-12 bg-[#f9f9f9] p-8 rounded-2xl">
@@ -189,54 +176,6 @@ export default function ProjectDetail() {
             </div>
           </section>
 
-          {/* Objectives */}
-          <section className="bg-[#f9f9f9] p-6 rounded-2xl">
-            <h2 
-              className="text-3xl mb-4 text-[#695aa6] flex items-center gap-3 font-leckerli"
-            >
-              <Target size={32} />
-              專案目標
-            </h2>
-            <ul className="space-y-3">
-              {project.objectives.map((objective, index) => (
-                <li 
-                  key={index}
-                  className="flex items-start gap-3 text-base text-[#212529] leading-relaxed font-patrick"
-                >
-                  <CheckCircle2 className="text-[#695aa6] flex-shrink-0 mt-0.5" size={20} />
-                  <span>{objective}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          {/* Stakeholders */}
-          <section>
-            <h2 
-              className="text-3xl mb-4 text-[#695aa6] flex items-center gap-3 font-leckerli"
-            >
-              <Users size={32} />
-              利害關係人
-            </h2>
-            <div className="bg-white p-6 rounded-2xl shadow-md border-t-4 border-[#695aa6]">
-              <div className="space-y-2">
-                {project.stakeholders.map((stakeholder, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-start gap-2 py-2 border-b border-gray-100 last:border-0"
-                  >
-                    <span className="text-[#695aa6] text-lg flex-shrink-0 mt-0.5">•</span>
-                    <p 
-                      className="text-base text-[#212529] font-patrick"
-                    >
-                      {stakeholder}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Methodology */}
           <section className="bg-[#f9f9f9] p-6 rounded-2xl">
             <h2 
@@ -272,31 +211,6 @@ export default function ProjectDetail() {
             </div>
           </section>
 
-          {/* Key Features */}
-          <section>
-            <h2 
-              className="text-3xl mb-4 text-[#695aa6] font-leckerli"
-            >
-              核心功能
-            </h2>
-            <div className="bg-white p-6 rounded-2xl shadow-md">
-              <div className="space-y-2">
-                {project.keyFeatures.map((feature, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-start gap-2 py-2 border-b border-gray-100 last:border-0"
-                  >
-                    <span className="text-[#695aa6] text-lg flex-shrink-0 mt-0.5">✓</span>
-                    <p 
-                      className="text-base text-[#212529] font-patrick"
-                    >
-                      {feature}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
         </div>
 
         {/* Process Documentation - Only show for specific projects */}
@@ -331,8 +245,8 @@ export default function ProjectDetail() {
             <p 
               className="text-lg text-[#212529] mb-8 leading-relaxed font-patrick"
             >
-              以下展示系統需求分析階段產出的 Use Case 圖（使用案例圖）。
-              為保護專案機密，已將敏感業務術語替換為通用描述，展示系統分析與需求梳理能力。
+              以下展示系統需求分析階段產出的 Use Case 圖（使用案例圖），
+              為保護專案機密，已將敏感業務術語替換為通用描述。
             </p>
             <UseCaseDiagram />
           </section>
@@ -350,7 +264,7 @@ export default function ProjectDetail() {
               className="text-lg text-[#212529] mb-8 leading-relaxed font-patrick"
             >
               以下展示業務流程分析階段產出的 BPMN 圖（業務流程模型與標記法）。
-              圖表呈現跨單位協作流程，包含泳道設計、流程節點與決策邏輯。為保護專案機密，已將敏感字眼替換為通用術語。
+              圖表呈現跨單位協作流程，包含泳道設計、流程節點與決策邏輯，為保護專案機密，已將敏感字眼替換為通用術語。
             </p>
             <BPMNDiagram />
           </section>
@@ -367,8 +281,8 @@ export default function ProjectDetail() {
             <p 
               className="text-lg text-[#212529] mb-8 leading-relaxed font-patrick"
             >
-              以下展示責任分配矩陣範例，包含 RACI 矩陣圖表。
-              為保護專案機密，已將敏感業務術語替換為通用描述，展示責任分配與角色分工能力。
+              以下展示責任分配矩陣範例，包含 RACI 矩陣圖表，
+              為保護專案機密，已將敏感業務術語替換為通用描述。
             </p>
             <RACIMatrix />
           </section>
@@ -385,8 +299,8 @@ export default function ProjectDetail() {
             <p 
               className="text-lg text-[#212529] mb-8 leading-relaxed font-patrick"
             >
-              以下展示功能路徑範例，包含 Function Path 圖表。
-              為保護專案機密，已將敏感業務術語替換為通用描述，展示功能路徑與流程設計能力。
+              以下展示功能路徑範例，包含 Function Path 圖表，
+              為保護專案機密，已將敏感業務術語替換為通用描述。
             </p>
             <FunctionPathDiagram />
           </section>
@@ -403,7 +317,7 @@ export default function ProjectDetail() {
             <p 
               className="text-lg text-[#212529] mb-8 leading-relaxed font-patrick"
             >
-              以下展示產品需求文件（PRD）與設計範例，包含需求分析、功能描述、設計圖表及原型。
+              以下展示產品需求文件（PRD）與設計範例，包含需求分析、功能描述、設計圖表及原型，
               為保護專案機密已將敏感業務術語替換為通用描述。
             </p>
             <PRDAndDesignSection />
@@ -421,7 +335,7 @@ export default function ProjectDetail() {
             <p 
               className="text-lg text-[#212529] mb-8 leading-relaxed font-patrick"
             >
-              以下展示產品需求文件（PRD）範例，包含 PRD Specification 圖表。
+              以下展示產品需求文件（PRD）範例，包含 PRD Specification 圖表，
               為保護專案機密已將敏感業務術語替換為通用描述。
             </p>
             <PRDSpecificationDiagram />

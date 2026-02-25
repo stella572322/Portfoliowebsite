@@ -56,10 +56,6 @@ export default function PRDAndDesignSection() {
               <ul className="space-y-2 text-sm text-gray-700 font-patrick">
                 <li className="flex items-start gap-2">
                   <span className="text-[#695aa6] font-bold">●</span>
-                  <span><strong>功能需求：</strong>涵蓋驗收管理、履約追蹤、文件管理等 89 個功能模組</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#695aa6] font-bold">●</span>
                   <span><strong>使用者故事：</strong>針對專案負責人、管理單位、審核單位等角色定義 Use Cases</span>
                 </li>
                 <li className="flex items-start gap-2">

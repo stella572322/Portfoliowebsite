@@ -14,10 +14,6 @@ export default function InteractivePrototypeSection() {
             桌面端功能模組 F1.1 - 互動原型設計
           </h3>
         </div>
-        <p className="text-base text-gray-700 mb-6 leading-relaxed">
-          展示桌面端主要功能模組的完整使用者流程設計，包含資料登錄、查詢、審核等核心操作介面。
-          原型涵蓋元件設計系統（Components）與完整互動流程（User Flow），確保介面一致性與使用體驗優化。
-        </p>
         <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
           <img 
             src={prototypeF11} 
@@ -39,10 +35,6 @@ export default function InteractivePrototypeSection() {
             桌面端功能模組 F1.2 - 互動原型設計
           </h3>
         </div>
-        <p className="text-base text-gray-700 mb-6 leading-relaxed">
-          展示桌面端進階功能模組的使用者流程設計，涵蓋複雜的多步驟操作流程與跨頁面互動邏輯。
-          原型設計強調資訊架構清晰度與操作路徑優化，降低使用者學習成本。
-        </p>
         <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
           <img 
             src={prototypeF12} 

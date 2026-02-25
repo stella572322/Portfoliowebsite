@@ -176,7 +176,11 @@ export default function PartialAcceptanceProcess() {
                     style={{ 
                       position: 'absolute',
                       left: `${(milestone.day / totalDays) * 100}%`,
-                      transform: 'translateX(-50%)'
+                      transform: milestone.day === 0
+                        ? 'translateX(0%)'
+                        : milestone.day === totalDays
+                        ? 'translateX(-100%)'
+                        : 'translateX(-50%)'
                     }}
                   >
                     {/* Milestone Label */}
@@ -219,6 +223,8 @@ export default function PartialAcceptanceProcess() {
                   <div 
                     key={stage.id}
                     className="relative"
+                    onMouseEnter={() => setHoveredStage(stage.id)}
+                    onMouseLeave={() => setHoveredStage(null)}
                     style={{ 
                       marginLeft: `${leftPosition}%`,
                       width: `${width}%`,
@@ -227,43 +233,27 @@ export default function PartialAcceptanceProcess() {
                   >
                     {/* Stage Card */}
                     <div
-                      onMouseEnter={() => setHoveredStage(stage.id)}
-                      onMouseLeave={() => setHoveredStage(null)}
-                      className={`p-5 rounded-lg border-2 transition-all duration-300 cursor-pointer ${
-                        hoveredStage === stage.id
-                          ? 'bg-[#f8bbd0] border-[#e91e63] shadow-xl scale-105 z-20'
-                          : 'bg-[#fce4ec] border-[#f8bbd0] shadow-md hover:shadow-lg'
-                      }`}
+                      className={`p-5 mb-4 rounded-lg border-2 transition-all duration-300 cursor-pointer origin-top relative ${
+                          hoveredStage === stage.id
+                            ? 'bg-white border-[#e91e63] shadow-xl scale-105 z-20'
+                            : 'bg-[#fce4ec] border-[#f8bbd0] shadow-md hover:shadow-lg'
+                        }`}
                     >
-                      {/* Stage Header */}
-                      <div className="flex items-start justify-between mb-3">
-                        <div className="flex items-center gap-2">
+                      {/* Stage Header (badge absolute to avoid squeezing title) */}
+                      <div className="relative mb-3">
+                        <div className="flex items-center gap-2 pr-16">
                           <span 
                             className={`flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold shadow ${
                               hoveredStage === stage.id
                                 ? 'bg-white text-[#e91e63]'
                                 : 'bg-[#e91e63] text-white'
-                            } font-leckerli`}
+                            } font-leckerli flex-shrink-0`}
                           >
                             {stage.id}
                           </span>
-                          <h4 
-                            className={`font-bold ${
-                              hoveredStage === stage.id ? 'text-white' : 'text-gray-800'
-                            } font-patrick`}
-                          >
+                          <h4 className="flex-1 min-w-0 font-bold text-gray-800 font-patrick truncate">
                             {stage.title}
                           </h4>
-                        </div>
-                        <div 
-                          className={`flex items-center gap-1 text-xs px-2 py-1 rounded-full ${
-                            hoveredStage === stage.id
-                              ? 'bg-white/30 text-white'
-                              : 'bg-white/60 text-gray-600'
-                          } font-patrick`}
-                        >
-                          <Clock size={12} />
-                          <span>{stage.duration}</span>
                         </div>
                       </div>
 
@@ -294,16 +284,16 @@ export default function PartialAcceptanceProcess() {
                           {/* Key Actions */}
                           <div>
                             <div className="flex items-center gap-1 mb-2">
-                              <CheckCircle2 size={14} className="text-white" />
-                              <span className="text-xs font-bold text-white">關鍵作業</span>
+                              <CheckCircle2 size={14} className="text-green-600" />
+                              <span className="text-xs font-bold text-gray-800">關鍵作業</span>
                             </div>
                             <ul className="space-y-1">
                               {stage.keyActions.slice(0, 4).map((action, idx) => (
                                 <li 
                                   key={idx}
-                                  className="flex items-start gap-2 text-xs text-white/95 font-patrick"
+                                  className="flex items-start gap-2 text-xs text-gray-700 font-patrick"
                                 >
-                                  <span className="text-white mt-0.5">•</span>
+                                  <span className="text-gray-700 mt-0.5">•</span>
                                   <span>{action}</span>
                                 </li>
                               ))}
@@ -313,16 +303,16 @@ export default function PartialAcceptanceProcess() {
                           {/* Risks */}
                           <div>
                             <div className="flex items-center gap-1 mb-2">
-                              <AlertTriangle size={14} className="text-yellow-300" />
-                              <span className="text-xs font-bold text-white">風險注意</span>
+                              <AlertTriangle size={14} className="text-yellow-400" />
+                              <span className="text-xs font-bold text-gray-800">風險注意</span>
                             </div>
                             <ul className="space-y-1">
                               {stage.risks.map((risk, idx) => (
                                 <li 
                                   key={idx}
-                                  className="flex items-start gap-2 text-xs text-white/95 font-patrick"
+                                  className="flex items-start gap-2 text-xs text-gray-700 font-patrick"
                                 >
-                                  <span className="text-yellow-300 mt-0.5">⚠</span>
+                                  <span className="text-yellow-400 mt-0.5">⚠</span>
                                   <span>{risk}</span>
                                 </li>
                               ))}
@@ -335,11 +325,13 @@ export default function PartialAcceptanceProcess() {
                     {/* Gantt Bar */}
                     <div className="mt-2">
                       <div 
-                        className="h-8 bg-[#e91e63] rounded-full shadow-md flex items-center justify-center"
-                        style={{ opacity: 0.8 }}
+                        className={`h-8 bg-[#e91e63] rounded-full shadow-md flex items-center justify-center transition-all duration-300 origin-top overflow-hidden ${
+                          hoveredStage === stage.id ? 'scale-105 shadow-xl translate-y-1' : ''
+                        }`}
+                        style={{ opacity: 0.95 }}
                       >
                         <span 
-                          className="text-white text-xs font-bold font-patrick"
+                          className="text-white text-xs font-bold font-patrick w-full truncate text-center px-3"
                         >
                           {stage.title} ({stage.duration})
                         </span>
